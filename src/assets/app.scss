@@ -59,47 +59,6 @@ a {
   width: 100%;
 }
 
-.form-row {
-  display: inline-block;
-  width: 100%;
-  margin: 0 0 20px;
-}
-
-.form-label {
-  display: block;
-  color: #333;
-}
-
-.form-el {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  min-width: 200px;
-
-  &.input {
-    background: #fff;
-    color: #777;
-    border: solid 1px #ddd;
-  }
-
-  &.btn {
-    background: #009285;
-    color: #fff;
-    text-align: center;
-    cursor: pointer;
-    display: block;
-
-    &[disabled] {
-      background: #808080;
-    }
-  }
-}
-
-.label {
-  display: inline-block;
-  width: 150px;
-}
-
 .tag {
   display: inline-block;
   width: 70px;
