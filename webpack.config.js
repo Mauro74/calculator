@@ -1,5 +1,6 @@
 const path = require("path");
 const webpack = require("webpack");
+const autoprefixer = require("autoprefixer");
 
 module.exports = {
   entry: "./src/index.js",
@@ -15,6 +16,28 @@ module.exports = {
       {
         test: /\.css$/,
         use: ["style-loader", "css-loader"]
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          {
+            loader: "style-loader"
+          },
+          {
+            loader: "css-loader"
+          },
+          {
+            loader: "postcss-loader",
+            options: {
+              plugins: function() {
+                return [autoprefixer("last 2 versions", "ie 10")];
+              }
+            }
+          },
+          {
+            loader: "sass-loader"
+          }
+        ]
       }
     ]
   },

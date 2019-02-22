@@ -31,6 +31,16 @@ h3 {
   font-size: 1.8em;
 }
 
+a {
+  display: inline-block;
+  color: #333;
+  border-bottom: solid 1px #009285;
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
 .app {
   width: 80%;
   margin: 0 auto;
@@ -55,45 +65,34 @@ h3 {
   margin: 0 0 20px;
 }
 
-.form-el {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  min-width: 200px;
-}
-
 .form-label {
   display: block;
   color: #333;
 }
 
-.form-el.input {
-  background: #fff;
-  color: #777;
-  border: solid 1px #ddd;
-}
+.form-el {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  min-width: 200px;
 
-a {
-  display: inline-block;
-  color: #333;
-  border-bottom: solid 1px #009285;
-  text-decoration: none;
-}
+  &.input {
+    background: #fff;
+    color: #777;
+    border: solid 1px #ddd;
+  }
 
-a:hover {
-  text-decoration: none;
-}
+  &.btn {
+    background: #009285;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    display: block;
 
-.form-el.btn {
-  background: #009285;
-  color: #fff;
-  text-align: center;
-  cursor: pointer;
-  display: block;
-}
-
-.form-el.btn[disabled] {
-  background: #808080;
+    &[disabled] {
+      background: #808080;
+    }
+  }
 }
 
 .label {
@@ -108,8 +107,8 @@ a:hover {
   border-radius: 4px;
   background-color: #99cc00;
   color: #fff;
-}
 
-.tag.off {
-  background-color: #bdbdbd;
+  &.off {
+    background-color: #bdbdbd;
+  }
 }
