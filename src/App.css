@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background: #fff;
+  font-size: 15px;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+h1,
+h2,
+h3,
+label,
+a,
+p {
+  margin: 3px 0 10px;
+}
+
+h1 {
+  font-size: 2.2em;
+}
+h2 {
+  font-size: 2em;
+}
+h3 {
+  font-size: 1.8em;
+}
+
+.app {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 2em;
+}
+
+.card {
+  padding: 30px;
+  border-radius: 8px;
+  background-color: #f4f4f4;
+  border: solid 1px #ddd;
+  display: flex;
+}
+
+.section {
+  width: 100%;
+}
+
+.form-row {
+  display: inline-block;
+  width: 100%;
+  margin: 0 0 20px;
+}
+
+.form-el {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  min-width: 200px;
+}
+
+.form-label {
+  display: block;
+  color: #333;
+}
+
+.form-el.input {
+  background: #fff;
+  color: #777;
+  border: solid 1px #ddd;
+}
+
+a {
+  display: inline-block;
+  color: #333;
+  border-bottom: solid 1px #009285;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.form-el.btn {
+  background: #009285;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+  display: block;
+}
+
+.form-el.btn[disabled] {
+  background: #808080;
+}
+
+.label {
+  display: inline-block;
+  width: 150px;
+}
+
+.tag {
+  display: inline-block;
+  width: 70px;
+  padding: 4px 6px;
+  border-radius: 4px;
+  background-color: #99cc00;
+  color: #fff;
+}
+
+.tag.off {
+  background-color: #bdbdbd;
+}
