@@ -28,8 +28,20 @@
     cursor: pointer;
     display: block;
 
+    &:hover {
+      background: lighten(#009285, 3%);
+    }
     &[disabled] {
       background: #808080;
+      // &:hover {
+      //   background: #808080;
+      // }
+    }
+
+    &.mini {
+      padding: 4px;
+      min-width: auto !important;
+      display: inline-block;
     }
   }
 }

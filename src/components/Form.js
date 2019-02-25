@@ -55,6 +55,13 @@ class Form extends Component {
     });
   };
 
+  saveUp = () => {
+    const increment = this.state.savings * 0.1 + this.state.savings;
+    this.setState({
+      savings: increment
+    });
+  };
+
   render() {
     const { wageShown, calculated, wage, savings, remainder } = this.state;
     return (
@@ -94,18 +101,23 @@ class Form extends Component {
                 <span className={`tag ${wageShown < 1 ? "off" : ""}`}>
                   {wageShown}
                 </span>
+                <small>{wageShown * 12} year</small>
               </p>
               <p>
                 <span className="label">Save for taxes:</span>
                 <span className={`tag ${wageShown < 1 ? "off" : ""}`}>
                   {calculated.toFixed(2)}
                 </span>
+                <small>{calculated.toFixed(2) * 12} year</small>
               </p>
               <p>
                 <span className="label">To save (10%):</span>
                 <span className={`tag ${wageShown < 1 ? "off" : ""}`}>
                   {savings.toFixed(2)}
                 </span>
+                <a className="form-el btn mini" href="#" onClick={this.saveUp}>
+                  + 10%
+                </a>
               </p>
               <p>
                 <span className="label">Remainder:</span>
