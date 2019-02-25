@@ -57,8 +57,10 @@ class Form extends Component {
 
   saveUp = () => {
     const increment = this.state.savings * 0.1 + this.state.savings;
+    const newNet = this.state.remainder - this.state.savings * 0.1;
     this.setState({
-      savings: increment
+      savings: increment,
+      remainder: newNet
     });
   };
 
@@ -89,8 +91,12 @@ class Form extends Component {
               >
                 Calculate
               </button>
-              <a href="#" onClick={this.clearForm}>
-                clear
+              <a
+                className="form-el btn secondary mini"
+                href="#"
+                onClick={this.clearForm}
+              >
+                Clear
               </a>
             </div>
           </div>
@@ -115,8 +121,12 @@ class Form extends Component {
                 <span className={`tag ${wageShown < 1 ? "off" : ""}`}>
                   {savings.toFixed(2)}
                 </span>
-                <a className="form-el btn mini" href="#" onClick={this.saveUp}>
-                  + 10%
+                <a
+                  className="form-el btn secondary mini"
+                  href="#"
+                  onClick={this.saveUp}
+                >
+                  <small>+ 10%</small>
                 </a>
               </p>
               <p>
