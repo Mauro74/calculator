@@ -5,7 +5,8 @@ const initialState = {
   wageShown: 0,
   calculated: 0,
   savings: 0,
-  remainder: 0
+  remainder: 0,
+  childMaintenance: 1212
 };
 
 class Form extends Component {
@@ -34,7 +35,7 @@ class Form extends Component {
       calculated: taxes,
       wageShown: wage,
       savings: save,
-      remainder: net,
+      remainder: net - this.state.childMaintenance,
       wage: ""
     });
     this.resetForm();
@@ -65,7 +66,14 @@ class Form extends Component {
   };
 
   render() {
-    const { wageShown, calculated, wage, savings, remainder } = this.state;
+    const {
+      wageShown,
+      calculated,
+      wage,
+      savings,
+      remainder,
+      childMaintenance
+    } = this.state;
     return (
       <form onSubmit={this.handleSubmit} ref={el => (this.taxForm = el)}>
         <div className="card">
@@ -91,6 +99,8 @@ class Form extends Component {
               >
                 Calculate
               </button>
+            </div>
+            <div className="form-row">
               <a
                 className="form-el btn secondary mini"
                 href="#"
@@ -128,6 +138,11 @@ class Form extends Component {
                 >
                   <small>+ 10%</small>
                 </a>
+                <span className="tick" />
+              </p>
+              <p>
+                <span className="label">Child maintenance:</span>
+                <span className="tag off">{childMaintenance.toFixed(2)}</span>
               </p>
               <p>
                 <span className="label">Remainder:</span>
